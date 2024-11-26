@@ -60,10 +60,14 @@ class _RecipeGridState extends State<RecipeGrid> {
 
     String apiKey = dotenv.env['spoonacular_api_key'] ?? '';
 
+    String queryParameter = widget.searchQuery.isNotEmpty
+        ? widget.searchQuery
+        : widget.selectedCategory;
+
     final offset = (widget.currentPage - 1) * 30;
-    final url = widget.searchQuery.isEmpty
-        ? 'https://api.spoonacular.com/recipes/complexSearch?apiKey=$apiKey&number=30&offset=$offset'
-        : 'https://api.spoonacular.com/recipes/complexSearch?apiKey=$apiKey&number=30&query=${widget.searchQuery}&offset=$offset';
+
+    final url =
+        'https://api.spoonacular.com/recipes/complexSearch?apiKey=$apiKey&number=30&offset=$offset&query=$queryParameter';
 
     try {
       setState(() => _isLoading = true);
