@@ -45,8 +45,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
       setState(() {
         isLoading = false;
       });
-      // Handle error if fetching user data fails
-      print('Error fetching user data: $error');
     }
   }
 
@@ -68,7 +66,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: CircularProgressIndicator(
                 color: Color(0xFF48B04C),
               ),
-            ) // Show loading indicator while data is being fetched
+            ) 
           : Column(
               children: [
                 const SizedBox(height: 20),

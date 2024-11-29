@@ -53,7 +53,6 @@ class _RecipeDetailsScreenState extends State<RecipeDetailsScreen> {
         isLoading = false;
       });
       // Handle error
-      print(error);
     }
   }
 
@@ -119,7 +118,6 @@ class _RecipeDetailsScreenState extends State<RecipeDetailsScreen> {
 
       setState(() {}); // Refresh UI
     } catch (error) {
-      print("Error toggling favorite: $error");
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Failed to update favorites')),

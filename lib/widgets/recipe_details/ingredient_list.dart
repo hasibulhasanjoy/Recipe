@@ -8,14 +8,6 @@ class IngredientList extends StatelessWidget {
 
   final List<dynamic> ingredients;
 
-  // final List<Map<String, dynamic>> ingredients = [
-  //   {'name': 'Oats', 'quantity': '1 cup'},
-  //   {'name': 'Banana', 'quantity': '2'},
-  //   {'name': 'Almond Milk', 'quantity': '1/2 cup'},
-  //   {'name': 'Baking Powder', 'quantity': '1 tsp'},
-  //   {'name': 'Salt', 'quantity': '1/4 tsp'},
-  // ];
-
   @override
   Widget build(BuildContext context) {
     return Padding(
